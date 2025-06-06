@@ -33,8 +33,12 @@ while True:
                     break
                 except ValueError as e:
                     print(e)
+
+            if nome not in usuarios_filmes:
+                 usuarios_filmes[nome]= []
+                    
             lista_filmes.append(filme)
-            usuarios_filmes [nome]= lista_filmes
+            
             print('Filme adicionado com sucesso')
                 
 
@@ -55,7 +59,9 @@ while True:
                     break
                 except ValueError as e:
                     print(e)
+            
             lista_filmes.remove(filme)
+
             usuarios_filmes [nome]= lista_filmes
             print('Filme removido com sucesso')
             
